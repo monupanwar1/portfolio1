@@ -7,7 +7,11 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
+
+import { ArrowLeft } from 'lucide-react';
+
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function NotFound() {
     return (
@@ -22,7 +26,12 @@ export default function NotFound() {
                 </CardContent>
                 <CardFooter className="flex justify-center">
                   
-            <Button>Go To Home</Button>
+                <Button>
+            <Link href="/" className="inline-flex items-center">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Home
+            </Link>
+          </Button>
                 </CardFooter>
             </Card>
 
