@@ -1,17 +1,34 @@
-export default function NotFound(){
-    return(
-        <div className="items-center justify-center flex flex-col width-full h-screen p-20">
-            <div className="flex items-center justifu-center text-center flex-col p-2">
-                <h1 className="text-rose-500 font-bold text-2xl">Opps! You have found <br />
-                 the lost world!
-                </h1>
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
 
-                <p className="text-green-500 ">Home is just a click away .Let's go back and continue our regular life</p>
-                
+import { Button } from "@/components/ui/button"
 
-            </div>
+export default function NotFound() {
+    return (
+        <div className=" bg-background items-center justify-center flex   min-h-screen">
+            <Card className="w-full max-w-md">
+                <CardHeader >
+                    <CardTitle className="justify-center font-bold flex items-center text-4xl">404</CardTitle>
+                  
+                </CardHeader>
+                <CardContent>
+                <p className="text-center  text-muted-foreground"> Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
+                </CardContent>
+                <CardFooter className="flex justify-center">
+                  
+            <Button>Go To Home</Button>
+                </CardFooter>
+            </Card>
 
-            <button className="p-2 bg-blue-500 rounded-md ">Go To Home</button>
+
+
+
         </div>
     )
 }
