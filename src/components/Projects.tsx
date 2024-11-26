@@ -1,3 +1,4 @@
+"use client"
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -41,7 +42,7 @@ export const Projects = () => {
   return (
     <>
       <h2 className="font-bold text-xl">Featured Projects</h2>
-      <div className="grid gap-4 mb-6 grid-cols-1 md:grid-cols-3">
+      <div className="grid gap-4 mb-6 grid-cols-1 md:grid-cols-2">
         {projects.map((p, i) => (
           <Card key={i}>
             <CardContent className="h-full pt-6">
@@ -69,7 +70,7 @@ export const Projects = () => {
                   {/* Link to View Project */}
                   <Link
                     href={p.link}
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
+                    className="flex items-center gap-6 text-sm  text-nowrap text-primary hover:underline"
                   >
                     View Project
                     <ExternalLink className="inline-block w-4 h-4" />
